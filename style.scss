@@ -1,0 +1,402 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Londrina Solid", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+
+}
+
+
+
+// Definindo cor de fundo geral
+body {
+  background-color: #f0f8ff;
+}
+
+// Header geral
+header {
+  display: flex;  /* Torna a caixa de imagens um container flexível */
+  flex-direction: column;/* Faz as linhas de imagens ficarem uma embaixo da outra */
+  padding: 20px;
+
+  // Topo: parte de cima (imagem + textos + botão começar)
+  .topo {
+    display: flex;  /* Torna a caixa de imagens um container flexível */
+    justify-content: space-between;   // Empurra o conteúdo da esquerda e o botão para os extremos
+    align-items: center;
+
+    // Parte esquerda: imagem e textos
+    .inicio {
+      display: flex;  /* Torna a caixa de imagens um container flexível */
+      align-items: center;
+
+      img {
+        width: 80px;
+        height: 60px;
+        background-color: #0033cc;
+        border-radius: 10px;
+        margin-right: 10px; /* Cria um espaço à direita para afastar a caixa do conteúdo anterior */
+      }
+
+      .titulo {
+        display: flex;  /* Torna a caixa de imagens um container flexível */
+        flex-direction: column;/* Faz as linhas de imagens ficarem uma embaixo da outra */
+
+        h2 {
+          color: #0033cc;
+          font-size: 30px;
+        }
+
+        h3 {
+          font-size: 20px;
+          color: #333;
+          font-weight: 300;
+        }
+      }
+    }
+
+    // Parte direita: botão começar
+    .botão {
+      button {
+        background-color: #0033cc;
+        color: white;
+        border-radius: 15px;
+        padding: 8px 16px;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  // Banner: imagem de fundo + título centralizado
+  .banner {
+    display: flex;  /* Torna a caixa de imagens um container flexível */
+           // Centraliza horizontalmente
+    align-items: center;            // Centraliza verticalmente
+    height: 80vh;  // Altura do banner
+    width: 100%; //tamanho da largura do banner
+    margin-top: 20px;
+
+    background-image: url('imagem/banner.png');/*Define uma imagem de fundo para a caixa (nesse caso, o banner do site).*/
+    background-size: cover; /* Faz a imagem de fundo cobrir toda a área do container, mesmo que tenha que cortar um pedaço.*/
+    background-position: center; /* Faz a imagem ficar centralizada no container, tanto horizontal quanto verticalmente.*/
+    background-repeat: no-repeat;/*Faz a imagem não se repetir, mesmo que a caixa seja maior que a imagem.*/
+
+    h1 {
+      font-size: 100px;
+      line-height: 1.2;
+      color: black;
+      padding-left: 50px;
+      
+    }
+  }
+
+  // Nav: botão abaixo do banner
+  nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+    button {
+      background-color: #0033cc;
+      color: white;
+      border-radius: 12px;
+      padding: 8px 16px;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+    }
+  }
+}
+
+
+//Começando a main
+main {
+  display: flex;
+  justify-content: center;//Centraliza na horizontal as divs dentro dessa caixa
+  padding: 20px;
+  
+  height: 100%;
+
+  .main1 {
+    
+    width: 35%;
+    display: flex;
+    flex-direction: column; /* Faz as linhas de imagens ficarem uma embaixo da outra */
+    padding: 10px;
+    
+  }
+
+    h3 {
+      font-size: 30px;
+      font-weight: bold;/* Deixa o texto do label mais forte (negrito) */
+      margin-bottom: 10px; 
+    }
+
+    p {
+      font-size: 22px;
+      margin-top: 5px;
+      font-weight: 300;
+      width: 20vw;
+    }
+  }
+
+  .imagensdamain {
+    width: 40%;
+    display: flex;/* Torna a caixa de imagens um container flexível */
+    flex-direction: column; /* Faz as linhas de imagens ficarem uma embaixo da outra */
+    padding: 20px;
+   
+    margin-left: 50px;/* Cria um espaço à esquerda para afastar a caixa do conteúdo anterior */
+    height: 100vh;
+
+    .linha1 {
+        display: flex;/* Torna a caixa de imagens um container flexível */
+
+        img {
+            width: 90%;
+            height: 150px; // Aumente o valor da altura
+            margin-right: 4%; /* Cria um espaço à direita para afastar a caixa do conteúdo anterior */
+        }
+    }
+
+    .linha2 {
+        display: flex; /* Torna a caixa de imagens um container flexível */
+        margin-top: 10px;
+
+        img {
+            width: 90%;
+            height: 150px; // Aumente o valor da altura
+            margin-right: 4%; /* Cria um espaço à direita para afastar a caixa do conteúdo anterior */
+        }
+    }
+}
+
+
+.Informações {
+  display: flex; /* Coloca Info1 e Info2 lado a lado */
+  justify-content: center;
+  gap: 50px; /* Espaço entre as duas colunas */
+  padding: 20px;
+
+  .Info1, .Info2 {
+    display: flex;/* Torna a caixa de imagens um container flexível */
+    flex-direction: column; /* Faz os pares ficarem um embaixo do outro */
+    gap: 15px; /* Espaço entre os pares */
+
+    .item {
+      display: flex; /* Faz a imagem ficar ao lado do texto */
+      align-items: center;
+
+      img {
+        width: 20px; /* Largura da imagem */
+        height: 20px; /*altura da imagem*/
+        margin-right: 10px; /* Espaço entre imagem e o texto */
+      }
+
+      h4 {
+        font-size: 20px;
+        margin: 0;
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+.botõesfooter {
+  display: flex;
+  justify-content: center; /* Centraliza na horizontal */
+  gap: 20px; /* Espaço entre os botões */
+  margin-top: 20px;
+
+  button {
+    background-color:#0033cc; /* Azul bonito (padrão Bootstrap) */
+    color: white; /* Letras brancas */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    font-size: 22px;
+    cursor: pointer;
+    width: 20vw;
+
+    &:hover {
+      background-color:#0056b3; /* Azul mais escuro ao passar o mouse */
+    }
+  }
+}
+
+
+.formulario {
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      background-color: #f0f0f0;/* Fundo cinza claro nos campos de formulário */
+      border: 1px solid #ccc; /* Uma borda cinza clara ao redor do campo */
+      padding: 10px; /* Dá um "respiro" dentro do campo de formulário */
+      margin-bottom: 15px; /*aqui esta criando 15px de espaço abaixo de cada input ou textarea.*/
+      border-radius: 4px; /* Cantinhos levemente arredondados */
+      font-size: 16px; /*Tamanho da letra*/
+
+      &::placeholder {
+        color: #999;// Placeholder cinza claro
+        font-weight: 300; // Texto mais fino
+      }
+    }
+
+    button {
+      background-color: #007BFF; /* Fundo azul para o botão */
+      color: white; /* Letras do botão brancas */
+      border: none;/*remove borda*/
+      padding: 10px 20px; /* faz um espaço interno (padding) no botão 10px em cima e em baixo e 20px nas laterais ( direita e esquerda)*/
+      border-radius: 5px; /* Botão com cantos bem arredondados */
+      font-size: 16px;
+      cursor: pointer;/*Faz com que, quando a pessoa passa o mouse em cima do botão, o cursor vira uma mãozinha de clique.*/
+
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+}
+
+  
+@media (max-width: 768px) {
+  // HEADER
+  header {
+    flex-direction: column;/* Empilha os blocos da main (texto + imagens) verticalmente */
+
+    .topo {
+      flex-direction: row; // Mantém o topo igual (imagem e título + botão do lado)
+      justify-content: space-between;
+      align-items: center; /* Centraliza os itens na horizontal */
+
+      .inicio {
+        flex-direction: row; // Garante que o logo e os textos fiquem lado a lado
+      }
+
+      .botão {
+        button {
+          display: block; // Garante que o botão "Começar" continue visível
+        }
+      }
+    }
+
+    .banner {
+      height: auto;
+      padding: 20px;
+      h1 {
+        font-size: 40px; // Diminui o tamanho do título
+        padding-left: 10px;
+      }
+    }
+
+    nav {
+      margin-top: 10px;
+      button {
+        width: 90%;
+        font-size: 18px;
+      }
+    }
+  }
+
+  // MAIN - Empilhando tudo
+  main {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+
+    .main1 {
+      width: 90%;
+      margin-bottom: 20px;
+
+      h3, p {
+        text-align: center;
+        width: 100%;
+      }
+    }
+
+    .imagensdamain {
+      width: 90%;
+      margin-left: 0;
+      height: auto;
+      padding: 10px;
+
+      // Empilha as imagens da linha1 e linha2
+      .linha1,
+      .linha2 {
+        flex-direction: column; /* Faz as imagens ficarem uma embaixo da outra no celular */
+  }
+
+        img {
+          width: 100%;
+          height: auto;
+          margin-bottom: 10px;
+        }
+      }
+
+      // Primeira imagem (a que fica sozinha em cima)
+      > img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  // INFORMAÇÕES - Uma abaixo da outra
+  .Informações {
+    flex-direction: column;/* Faz Info1 e Info2 ficarem um embaixo do outro no celular */
+    align-items: center;
+    gap: 20px;
+
+    .Info1, .Info2 {
+      width: 90%;
+      align-items: center;
+
+      .item {
+        justify-content: center;
+      }
+    }
+  }
+
+  // BOTÕES DO FOOTER - Empilhar também
+  .botõesfooter {
+    flex-direction: column;/* Faz os botões ficarem um embaixo do outro no celular */
+    align-items: center;
+
+    button {
+      width: 80%;
+      margin-bottom: 10px;
+    }
+  }
+
+  // FORMULÁRIO - Alargar para caber no mobile
+  .formulario {
+    width: 90%;
+
+    form {
+      input,
+      textarea {
+        width: 100%;
+      }
+    }
+  }
